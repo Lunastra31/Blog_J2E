@@ -1,0 +1,339 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 18 sept. 2023, 09:19:50
+    Author     : Moa
+*/
+
+@font-face {
+  font-family: 'Material Icons';
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://example.com/MaterialIcons-Regular.eot); /* For IE6-8 */
+  src: local('Material Icons'),
+    local('MaterialIcons-Regular'),
+    url(https://example.com/MaterialIcons-Regular.woff2) format('woff2'),
+    url(https://example.com/MaterialIcons-Regular.woff) format('woff'),
+    url(https://example.com/MaterialIcons-Regular.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Mooli';
+  src: url(../fonts/Mooli-Regular.ttf);
+}
+
+@font-face {
+  font-family: 'Croissant';
+  src: url(../fonts/CroissantOne-Regular.ttf);
+}
+
+* {
+  font-family: 'Mooli';
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  margin: 0 0;
+  color: whitesmoke;
+}
+
+header {
+  background: linear-gradient(180deg, rgba(55, 197, 199, 1) 0%, rgb(22, 56, 96) 100%);
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  background: linear-gradient(0deg, rgba(55, 197, 199, 1) 0%, rgb(22, 56, 96) 100%);
+  color: whitesmoke;
+}
+
+/* Styles pour la navigation dans le header */
+ul {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 100px;
+  margin-bottom: 0;
+}
+
+.ul li {
+  border-top: 5px solid rgba(255, 255, 255, 0);
+  padding: 15px 0px;
+  list-style: none;
+  font-size: 1rem;
+  color: #00f7ff;
+}
+
+.ul li:hover {
+  cursor: pointer;
+  border-top: 5px solid #003cff;
+}
+
+.ul li:active {
+  color: #003cff;
+  border-top: 5px solid #003cff;
+}
+
+a.menu {
+  text-decoration: none;
+  color: #00f7ff;
+}
+
+a.menu:hover {
+  color: #003cff;
+  margin-top: 20px;
+  margin-bottom: 50px;
+}
+
+#maintitle {
+  font-family: 'Croissant';
+  display: flex;
+  justify-content: center;
+  margin: 0 0;
+  padding: 30px;
+  font-size: 4rem;
+  color: whitesmoke;
+}
+
+.maincontent {
+  background-color: rgb(22, 56, 96);
+}
+
+main {
+  background-color: rgb(22, 56, 96);
+  padding-bottom: 15px;
+  min-height: 100vh;
+}
+
+#showNews {
+  background-color: rgb(22, 56, 96);
+  padding: 15px 0;
+}
+
+main>section {
+  background: url(../img/journal.jpg)center;
+  background-attachment: fixed;
+  background-size: cover;
+  color: whitesmoke;
+}
+
+.divsec {
+  margin: 0 150px;
+}
+
+.divsec h3 {
+  margin: 0 auto;
+  padding: 30px 0;
+}
+
+.DixIndex {
+  display: flex;
+  justify-content: center;
+}
+
+.histo {
+  color: whitesmoke;
+  padding: 50px auto;
+  margin: 0 120px;
+}
+
+#Dix {
+  color: whitesmoke;
+  display: flex;
+  margin: 0 auto;
+  padding: 15px;
+  justify-content: center;
+  font-family: 'Croissant';
+  font-style: italic;
+  position: relative;
+}
+
+#Dix::before {
+  content: "";
+  position: absolute;
+  background: whitesmoke;
+  height: 1px;
+  bottom: 5px;
+  width: 80%;
+  left: 50%;
+  transform: translateX(-50%) scaleX(0);
+  animation: line 5s ease-in-out forwards;
+}
+
+@keyframes line {
+  100% {
+    transform: translateX(-50%) scaleX(1);
+  }
+}
+
+.newscontent {
+  background: rgba(245, 245, 245, 0.178);
+  border-radius: 7px;
+  margin: 15px auto;
+  padding: 15px;
+  min-width: 80%;
+}
+
+#newscontent{
+  background: rgba(245, 245, 245, 0.178);
+  border-radius: 7px;
+  margin: 15px 20px;
+  padding: 15px;
+}
+
+div.titleNews {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.abody {
+  padding-bottom: 15px;
+  text-align: justify;
+}
+
+.containerbutton {
+  margin: 0 0;
+}
+
+button {
+  display: flex;
+  justify-content: center;
+  background: none;
+  color: white;
+  font-family: 'Mooli';
+  font-size: 1rem;
+  padding: 10px 10px;
+  transition: 1s;
+  margin: auto;
+  border: 1px solid;
+}
+
+button:hover {
+  transition: 1s;
+  background: white;
+  cursor: pointer;
+}
+
+button>a {
+  text-decoration: none;
+  color: whitesmoke;
+}
+
+button>a:hover {
+  text-decoration: none;
+  color: #003cff;
+}
+
+.gridnews {
+display: grid;
+grid-template-columns: 3fr 1fr;
+}
+
+.voting{
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+
+#thumbup{
+  margin: 0 5px;
+  border-radius: 4px;
+  background: url(../img/thumb_up.png);
+  border: none;
+  background-color: whitesmoke;
+
+}
+
+#thumbup:hover{
+  margin: 0 5px;
+  border-radius: 4px;
+  background: url(../img/thumb_up.png);
+  border: none;
+  background-color: rgb(23, 128, 248);
+
+}
+
+#thumbdown{
+  margin: 0 5px;
+  border-radius: 4px;
+  background: url(../img/thumb_down.png);
+  border: none;
+  background-color: whitesmoke;
+}
+
+#thumbdown:hover{
+  margin: 0 5px;
+  border-radius: 4px;
+  background: url(../img/thumb_down.png);
+  border: none;
+  background-color: rgb(23, 128, 248);
+}
+
+.asubtitle{
+  font-weight: bold;
+}
+
+.myNews{
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+}
+
+.articleUser {
+  display: flex;
+  flex-direction: row;
+  width: 25%;
+  justify-content: space-between;
+}
+
+.buttonArticle {
+  display: flex;
+  height: 1.3rem;
+  margin: auto;
+}
+
+.buttonadmin{
+display: flex;
+flex-direction: row;
+}
+
+table {
+  width: 80%;
+  margin: auto;
+  border-collapse: collapse;
+}
+
+#gerer{
+text-align: end;
+}
+
+th{
+  font-weight: bolder;
+}
+
+td {
+  max-width: 100px;
+  /* Définir la largeur maximale pour l'aperçu */
+  white-space: nowrap;
+  /* Empêcher le contenu de se retourner */
+  overflow: hidden;
+  /* Cacher le contenu dépassant de la cellule */
+  text-overflow: ellipsis;
+  /* Ajouter des points de suspension (...) pour indiquer un aperçu */
+  /* Ajouter une bordure pour séparer les cellules */
+  padding: 10px;
+  /* Ajouter un peu d'espace autour du contenu */
+  text-align: center;
+}
+
+.error {
+  color: red;
+  font-size: 0.8rem;
+  font-style: italic;
+}

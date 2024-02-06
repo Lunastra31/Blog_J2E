@@ -1,0 +1,45 @@
+<%-- any content can be specified here e.g.: --%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ page pageEncoding="UTF-8" %>
+<h2 id="Dix">Les articles</h2>
+<table>
+    <tr>
+        <c:if test="${sessionScope.admin}">
+            <th>Id</th>
+            </c:if>
+        <th>Titre</th>
+        <th>Contenu</th>
+        <th>Date de création</th>
+        <th>Auteur</th>
+        <th>Gérer</th>
+    </tr>
+    <c:forEach items="${requestScope.news}" var="news">
+        <tr>
+            <c:if test="${sessionScope.admin}">
+                <td>${news.id_news}</td>
+            </c:if>
+            <td>${news.title_news}</td>
+            <td>${news.content_news}</td>
+            <td>${news.created_news}</td>
+            <td>${news.user.login}</td>  
+            <td>
+                <button>
+                    <c:choose >
+                        <c:when test="${sessionScope.admin}">
+                            <a class="danger"
+                               href="<c:url value="/admin/deleteNews?id=${news.id}"/>">
+                                Supprimer
+                            </a>
+                        </c:when>
+                        <c:otherwise>
+                            <a class="danger"
+                               href="<c:url value="/user/deleteNews?id=${news.id}"/>">
+                                Supprimer
+                            </a>
+                        </c:otherwise>
+                    </c:choose>
+                </button>
+            </td>
+        </tr>
+    </c:forEach>
+</table>

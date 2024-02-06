@@ -1,0 +1,104 @@
+* {
+    font-family: 'Mooli';
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    margin: 0 0;
+    color: whitesmoke;
+}
+
+main {
+    background: url(../img/journal.jpg)center;
+    background-attachment: fixed;
+    background-size: cover;
+    min-height: 100vh;
+}
+
+
+#maintitle {
+    color: whitesmoke;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    background: linear-gradient(0deg, rgba(55, 197, 199, 1) 0%, rgb(22, 56, 96) 100%);
+    color: whitesmoke;
+}
+
+.containerlogin {
+    background: rgba(245, 245, 245, 0.178);
+    border-radius: 10px;
+    margin: 15px auto;
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    width: 40%;
+    backdrop-filter: blur(5px);
+}
+
+label {
+    color: whitesmoke;
+}
+
+.login {
+    display: grid;
+    align-items: center;
+    grid-template-columns: 2fr 1fr;
+    justify-content: center;
+}
+
+#password, #login, #confirm, #newP, #ancient, #author, #title, #content{
+   
+    background-color: rgba(190, 189, 189, 0.603);
+    border-color: rgb(255, 255, 255, 0.4);
+    border-radius: 15px;
+  
+}
+
+#warning{
+    color: red;
+    font-weight: bolder;
+}
+
+.submit{
+    background-color: rgb(22, 56, 96);
+    color: whitesmoke;
+    cursor: pointer;
+    border-radius: 3px;
+    border: none;
+    margin: 0 20px;
+}
+
+.submit:hover{
+    background-color: rgb(22, 87, 96);
+    color: whitesmoke;
+    cursor: pointer;
+    border-radius: 3px;
+    border: none;
+    letter-spacing: 1px;
+    transition: 0.2s;
+
+}
+
+#commentmyNews{
+    background-color: rgb(22, 56, 96);
+    border-radius: 10px;
+    margin: 15px auto;
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    width: 40%;
+    backdrop-filter: blur(5px);
+}
+
+.submitcontainer{
+    display: flex;
+    justify-content: center;
+}
